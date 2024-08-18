@@ -1,21 +1,14 @@
 # Eklo
 
-This is a basic web application
+This is a basic web application that has been created for sharing letters anonymously without opeaning identity of user
 
 Features:
 
-- add here
+-can share letters whenever they like
+-can add comments on the post
+-can upvote or downvote the post
 
 
 ## Demo
-<!-- [Link Here](https://youtube.com) -->
+[Eklo-web application Demonstration](https://youtu.be/4U4sMLsjKxo)
 
-## Setting Up
-
-
-
-## Running Application
-
-```shell
-git pull origin main
-```

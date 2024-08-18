@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <a href="register.php">New to Eklo? Signup</a>
         </div>
         <div class="forgot-password">
-            <a href="forgot_password.php">Forgot Password?</a>
+            <a href="forget_password.php">Forgot Password?</a>
         </div>
     </div>
 
