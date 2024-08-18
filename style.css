@@ -1,154 +1,243 @@
-body {
-    font-family: sans-serif;
-    margin: 0;
-  }
 
+body {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.sidebar {
+  width: 300px;
+  background: #2c2c2c;
+  padding: 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  animation: slideIn 0.8s ease-out;
+}
+
+.header .logo {
+  color: #fff;
+  font-size: 28px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-item {
+  margin: 20px 0;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+  padding: 10px;
+  display: block;
+  border-radius: 8px;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #dcdcdc;
+}
+
+.content {
+  flex: 1;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 0 20px 20px 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-bar-container {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.85);
+  transition: box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.link-btn {
+  background-color: #2575fc;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.link-btn:hover {
+  background-color: #1a5bbb;
+  transform: scale(1.05);
+}
+
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.post {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  width: calc(33.333% - 20px);
+  animation: fadeIn 1.2s ease-in-out;
+  color: #000;
+  margin: 10px 0;
+}
+
+.post h3 {
+  margin-top: 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.post p {
+  margin-bottom: 10px;
+}
+
+/* Voting and Commenting Forms */
+.vote-form {
+  margin: 10px 0;
+}
+
+.vote-form button {
+  background-color: #2575fc;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.vote-form button:hover {
+  background-color: #1a5bbb;
+}
+
+.comment-form {
+  margin-top: 20px;
+}
+
+.comment-form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.85);
+  margin-bottom: 10px;
+}
+
+.comment-form button {
+  background-color: #2575fc;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.comment-form button:hover {
+  background-color: #1a5bbb;
+}
+
+.comments {
+  margin-top: 20px;
+}
+
+.comment {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateX(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .container {
-    display: flex;
+      flex-direction: column;
   }
 
   .sidebar {
-    width: 200px;
-    background-color: #f5f5f5;
-    padding: 20px;
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .content {
-    flex: 1;
-    padding: 20px;
-  }
-
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: purple;
-  }
-
-  .search {
-    width: 300px;
-  }
-
-  .search-input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-
-  .nav {
-    list-style: none;
-    padding: 0;
-  }
-
-  .nav-item {
-    margin-bottom: 10px;
-  }
-
-  .nav-link {
-    text-decoration: none;
-    color: #333;
-  }
-
-  .topics {
-    margin-top: 20px;
-  }
-
-  .topic {
-    margin-bottom: 10px;
-  }
-
-  .topic-title {
-    font-weight: bold;
+      margin-left: 0;
+      border-radius: 0 0 20px 20px;
   }
 
   .post {
-    border: 1px solid #ccc;
-    padding: 15px;
-    margin-bottom: 15px;
+      width: calc(100% - 20px);
   }
-
-  .post-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .post-author {
-    font-weight: bold;
-  }
-
-  .post-title {
-    margin-top: 5px;
-  }
-
-  .post-content {
-    margin-top: 10px;
-  }
-
-  .post-actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-  }
-
-  .vote-button {
-    border: 1px solid #ccc;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  .comment-button {
-    border: 1px solid #ccc;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  .share-button {
-    border: 1px solid #ccc;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  .popular-communities {
-    margin-top: 20px;
-  }
-
-  .community {
-    margin-bottom: 10px;
-  }
-
-  .community-name {
-    font-weight: bold;
-  }
-
-  .community-members {
-    font-size: 12px;
-    color: #666;
-  }
-
-  .link-btn{
-    padding: 10px 20px;
-    margin: 5px;
-    background-color: purple;
-    /* background-color: #45a049; */
-    color: white;
-    font-weight: bold;
-    font-size: large;  
-    border-radius: 5px;
-    text-decoration: none;
-  }
-
-.link-btn:hover{
-    filter: brightness(1.1);
 }
